@@ -18,15 +18,25 @@
     "react": "19.0.0-rc-f994737d14-20240522",
     "react-dom": "19.0.0-rc-f994737d14-20240522",
     "tailwindcss": "3.4.4",
-    "typescript": "5.5.2",
     "use-debounce": "^10.0.1",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.1.0",
+    "@eslint/js": "^9.6.0",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "20.14.8",
     "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0"
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
+    "eslint": "~8.57.0",
+    "eslint-config-xo": "^0.45.0",
+    "eslint-config-xo-typescript": "^4.0.0",
+    "eslint-plugin-react": "^7.34.3",
+    "globals": "^15.6.0",
+    "typescript": "5.5.2",
+    "typescript-eslint": "^7.14.1"
   },
   "engines": {
     "node": ">=20.12.0"
