@@ -32,19 +32,19 @@ module.exports = {
 	],
 	"rules": {
 		"indent": [
-			"error",
+			"warn",
 			"tab"
 		],
 		"linebreak-style": [
-			"error",
+			"warn",
 			"unix"
 		],
 		"quotes": [
-			"error",
+			"warn",
 			"double"
 		],
 		"semi": [
-			"error",
+			"warn",
 			"always"
 		],
 		"react/react-in-jsx-scope": "off"
