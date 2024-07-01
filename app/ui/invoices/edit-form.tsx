@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { CustomerField, InvoiceForm } from "@/app/lib/definitions";
+import { State, updateInvoice } from "@/app/lib/actions";
 import {
 	CheckIcon,
 	ClockIcon,
@@ -9,16 +12,22 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Button } from "@/app/ui/button";
+import { useActionState } from "react";
 
 export default function EditInvoiceForm({
 	invoice,
 	customers,
 }: {
-  invoice: InvoiceForm;
-  customers: CustomerField[];
-}) {
+	invoice: InvoiceForm;
+	customers: CustomerField[];
+  }) {
+	const initialState = { message: null, errors: {} };
+	const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
+	// @ts-expect-error
+	const [state, formAction] = useActionState(updateInvoiceWithId, initialState);
+   
 	return (
-		<form>
+		<form action={formAction}>
 			<div className="rounded-md bg-gray-50 p-4 md:p-6">
 				{/* Customer Name */}
 				<div className="mb-4">
